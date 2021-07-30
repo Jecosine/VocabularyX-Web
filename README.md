@@ -1,24 +1,27 @@
+<!--
+ * @Date: 2021-07-26 17:44:04
+ * @LastEditors: Jecosine
+ * @LastEditTime: 2021-07-28 02:59:07
+-->
+
 # vocabularyx
 
-## Project setup
-```
-yarn install
-```
+## Database
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+### Entity
 
-### Compiles and minifies for production
-```
-yarn build
-```
+- word
+- notebook
+- plan
+- section
+- tag
 
-### Lints and fixes files
-```
-yarn lint
-```
+### Word
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```typescript
+interface IWord {
+  private id: string,
+  spelling: string,
+  pos: string
+}
+```
