@@ -1,25 +1,31 @@
 <template>
-  <router-view />
+  <el-container>
+    <el-header>
+      <navbar @collapse="triggerCollapse"></navbar>
+    </el-header>
+    <el-main></el-main>
+    <el-footer></el-footer>
+  </el-container>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
+<script lang="ts">
+import Navigation from '@/components/Navigation.vue'
 export default {
   name: 'App',
   components: {
+    navbar: Navigation
+  },
+  setup () {
+    const triggerCollapse = function (e: boolean) {
+      console.log('triggerred', e)
+    }
+    return {
+      triggerCollapse
+    }
   }
 }
 </script>
 
-<style>
-@import '~@/styles/base.css';
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "~@/styles/base.scss";
 </style>

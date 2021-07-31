@@ -1,0 +1,47 @@
+@import "./reset.scss";
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// navigation component variables
+$--nav-height: 4rem;
+$--nav-padding: 1.5rem;
+$--el-color-primary: #139599;
+// override default button
+
+.larger.el-button--medium {
+  min-height: 3rem !important;
+  line-height: 4rem;
+  font-size: 1.5rem;
+  padding: 0 0;
+}
+
+#navigation-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  width: 100vw;
+  height: $--nav-height;
+  box-shadow: 0 0.2rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+  #navigation-wrapper {
+    position: relative;
+    width: calc(100% - #{2 * $--nav-padding});
+    padding: 0 $--nav-padding;
+    height: $--nav-height;
+    line-height: $--nav-height;
+    display: flex;
+    flex-direction: row;
+
+    #nav-collapse-icon {
+      margin-right: 1rem;
+    }
+
+    #nav-app-title {
+      font-size: 1.5rem;
+      font-weight: bolder;
+      // font-color: 
+    }
+  }
+}
