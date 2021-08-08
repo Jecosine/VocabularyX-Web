@@ -5,3 +5,9 @@ declare module '*.vue' {
   export default component
 }
 declare module 'element-plus'
+
+declare type IMenuItem = {
+  name: string,
+  icon: string,
+  route: string
+}
